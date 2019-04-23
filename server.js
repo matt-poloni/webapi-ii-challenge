@@ -1,6 +1,6 @@
 const express = require('express');
 
-// const someRouter = require('./something/some-router.js');
+const postsRouter = require('./posts/posts-router.js');
 
 const server = express();
 
@@ -10,6 +10,6 @@ server.get('/', (req, res) => {
   res.send("It's working");
 });
 
-// server.use('/api/something', someRouter);
+server.use('/api/posts', postsRouter);
 
 module.exports = server;
