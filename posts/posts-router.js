@@ -42,15 +42,11 @@ router.delete('/:id', async (req, res) => {
   const deleted = await db.findById(postID);
   db.remove(postID)
     .then(count => {
-      console.log('then', count) // returns `then 1`
       !count
         ? res.status(404).json({ error: 'The post with the specified ID does not exist.' })
         : res.status(200).json(deleted[0]);
     })
-    .catch(err => {
-      console.log('catch', err) // returns `catch TypeError: Converting circular structure to JSON`
-      res.status(500).json({ error: 'The post could not be removed.' })
-    });
+    .catch(err => res.status(500).json({ error: 'The post could not be removed.' }));
 })
 
 // PUT (update) specific post
