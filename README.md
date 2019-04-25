@@ -12,10 +12,10 @@ Use `Node.js` and `Express` to build an API that performs _CRUD_ operations on `
 
 ### Project Setup
 
-- **Fork** and **Clone** this repository.
-- **CD into the folder** where you cloned the repository.
-- Type `yarn` or `npm install` to download all dependencies.
-- To start the server, type `yarn server` or `npm run server` from the root folder (where the _package.json_ file is). The server is configured to restart automatically as you make changes.
+- [x] **Fork** and **Clone** this repository.
+- [x] **CD into the folder** where you cloned the repository.
+- [x] Type `yarn` or `npm install` to download all dependencies.
+- [x] To start the server, type `yarn server` or `npm run server` from the root folder (where the _package.json_ file is). The server is configured to restart automatically as you make changes.
 
 ### Database Persistence Helpers
 
@@ -65,7 +65,7 @@ Configure the API to handle to the following routes:
 
 #### Endpoint Specifications
 
-When the client makes a `POST` request to `/api/posts`:
+- [x] When the client makes a `POST` request to `/api/posts`:
 
 - If the request body is missing the `title` or `contents` property:
 
@@ -84,14 +84,14 @@ When the client makes a `POST` request to `/api/posts`:
   - respond with HTTP status code `500` (Server Error).
   - return the following JSON object: `{ error: "There was an error while saving the post to the database" }`.
 
-When the client makes a `GET` request to `/api/posts`:
+- [x] When the client makes a `GET` request to `/api/posts`:
 
 - If there's an error in retrieving the _posts_ from the database:
   - cancel the request.
   - respond with HTTP status code `500`.
   - return the following JSON object: `{ error: "The posts information could not be retrieved." }`.
 
-When the client makes a `GET` request to `/api/posts/:id`:
+- [x] When the client makes a `GET` request to `/api/posts/:id`:
 
 - If the _post_ with the specified `id` is not found:
 
@@ -103,7 +103,7 @@ When the client makes a `GET` request to `/api/posts/:id`:
   - respond with HTTP status code `500`.
   - return the following JSON object: `{ error: "The post information could not be retrieved." }`.
 
-When the client makes a `DELETE` request to `/api/posts/:id`:
+- [x] When the client makes a `DELETE` request to `/api/posts/:id`:
 
 - If the _post_ with the specified `id` is not found:
 
@@ -115,7 +115,7 @@ When the client makes a `DELETE` request to `/api/posts/:id`:
   - respond with HTTP status code `500`.
   - return the following JSON object: `{ error: "The post could not be removed" }`.
 
-When the client makes a `PUT` request to `/api/posts/:id`:
+- [x] When the client makes a `PUT` request to `/api/posts/:id`:
 
 - If the _post_ with the specified `id` is not found:
 
@@ -144,8 +144,8 @@ When the client makes a `PUT` request to `/api/posts/:id`:
 
 To work on the stretch problems you'll need to enable the `cors` middleware. Follow these steps:
 
-- add the `cors` npm module: `yarn add cors` or `npm i cors`.
-- add `server.use(cors())` after `server.use(express.json())`.
+- [x] add the `cors` npm module: `yarn add cors` or `npm i cors`.
+- [x] add `server.use(cors())` after `server.use(express.json())`.
 
 Create a new React application and connect it to your server:
 
